@@ -4,6 +4,13 @@ A script to create an organized tableau from an image collection using unsupervi
 ## Usage 
 Just pass a folder with the collection of images and it will generate one image with all thumbnails spatially organized.
 
+Example with ~12000 images (resized)
+![1200 images](/images/12000.jpg)
+
+Example with ~200 images  (resized)
+![1200 images](/images/200.jpg)
+
+
 ## Install
 
 1. Clone this repository.
@@ -41,3 +48,12 @@ Just pass a folder with the collection of images and it will generate one image 
   
 ```-rt RANDOMSTATE_TSNE, --randomstate_tsne RANDOMSTATE_TSNE```
   TSNE randomstate integer. repeat to obtain the same results
+
+## To Do
+
+. Load features saved in the pkl file
+. Clustering
+. Clustering with voronoi borders
+. Clustering with size weight
+. Mosaic organization instead of scatter
+
