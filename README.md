@@ -14,3 +14,30 @@ Just pass a folder with the collection of images and it will generate one image 
 6. The image will be created one directory above the image directory.
 
 ## Options
+
+```-h, --help```
+  show this help message and exit
+  
+```--width WIDTH```
+  width of final image
+  
+```--height HEIGHT```
+  height of final image
+  
+```-t THUMBWIDTH, --thumbwidth THUMBWIDTH ```
+  width of each thumbnail in the final image
+  
+```-m {vgg16,vgg19,resnet50}, --model {vgg16,vgg19,resnet50} ```
+  choice of feature categorization model
+  
+```-i SAVEIMAGE, --saveimage SAVEIMAGE```
+  name of image to be saved
+  
+```-f SAVEFEATURES, --savefeatures SAVEFEATURES```
+  name of file to store the extracted features
+  
+```-rp RANDOMSTATE_PCA, --randomstate_pca RANDOMSTATE_PCA```
+  PCA randomstate integer. repeat to obtain the same results
+  
+```-rt RANDOMSTATE_TSNE, --randomstate_tsne RANDOMSTATE_TSNE```
+  TSNE randomstate integer. repeat to obtain the same results
