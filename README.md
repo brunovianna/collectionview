@@ -13,12 +13,13 @@ Example with ~200 images  (resized)
 
 ## Install
 
-1. Clone this repository.
-2. Install Conda https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
-3. Prepare the environment using:  ```conda env create -f collection_view.yml```
-4. Activate the environment with: ```conda activate collection_view```
-5. Run the python script and pass a directory (subfolders are ok): ```python collection_view.py my_dir```
-6. The image will be created one directory above the image directory.
+1. Install Conda https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
+2. Clone this repository.
+3. Change to repo directory: ```cd collectionview```
+4. Prepare the environment using:  ```conda env create -f collection_view.yml```
+5. Activate the environment with: ```conda activate collection_view```
+6. Run the python script and pass a directory (subfolders are ok): ```python collection_view.py my_dir```
+7. The image will be created one directory above the image directory.
 
 ## Options
 
