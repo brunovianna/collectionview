@@ -1,5 +1,5 @@
 # Collection View
-A script to create an organized tableau from an image collection using unsupervise learning
+A script to create an organized tableau from an image collection using unsupervised learning
 
 ## Usage 
 Just pass a folder with the collection of images and it will generate one image with all thumbnails spatially organized.
