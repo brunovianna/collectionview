@@ -51,9 +51,9 @@ Example with ~200 images  (resized)
 
 ## To Do
 
-. Load features saved in the pkl file
-. Clustering
-. Clustering with voronoi borders
-. Clustering with size weight
-. Mosaic organization instead of scatter
+* Load features saved in the pkl file
+* Clustering
+* Clustering with voronoi borders
+* Clustering with size weight
+* Mosaic organization instead of scatter
 
