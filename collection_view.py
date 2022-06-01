@@ -39,14 +39,14 @@ parser = argparse.ArgumentParser()
 
 # add arguments to the parser
 parser.add_argument("directory", default= "./", type=str, nargs=1)
-parser.add_argument( "--width")
-parser.add_argument( "--height")
-parser.add_argument("-t", "--thumbwidth", default=120)
-parser.add_argument("-m", '--model', choices=['vgg16', 'vgg19', 'resnet50'], default="resnet50")
-parser.add_argument("-i", '--saveimage',default="collection_vision.jpg")
-parser.add_argument("-f", '--savefeatures',default="collection_vision.pkl")
-parser.add_argument("-rp", '--randomstate_pca',type=int,default=None)
-parser.add_argument("-rt", '--randomstate_tsne',type=int,default=None)
+parser.add_argument( "--width", help="width of the final image. optional.")
+parser.add_argument( "--height", help="height of the final image. optional.")
+parser.add_argument("-t", "--thumbwidth", default=120, help="width of each thumbnail in the final image")
+parser.add_argument("-m", '--model', choices=['vgg16', 'vgg19', 'resnet50'], default="resnet50", help="choice of feature categorization model")
+parser.add_argument("-i", '--saveimage',default="collection_vision.jpg",  help="name of image to be saved")
+parser.add_argument("-f", '--savefeatures',default="collection_vision.pkl", help="name of file to store the extracted features")
+parser.add_argument("-rp", '--randomstate_pca',type=int,default=None, help="PCA randomstate integer. repeat to obtain the same results")
+parser.add_argument("-rt", '--randomstate_tsne',type=int,default=None, help="TSNE randomstate integer. repeat to obtain the same results")
 
 # parse the arguments
 args = parser.parse_args()
@@ -124,7 +124,7 @@ def extract_features(file, model):
     return features
 
 data = {}
-p = args.directory[0]+"/collection_data.pkl"
+p = args.directory[0]+args.savefeatures
 
 # lop through each image in the dataset
 for index, picture in enumerate(pictures):
@@ -142,7 +142,7 @@ for index, picture in enumerate(pictures):
 with open(p,'wb') as file:
     pickle.dump(data,file)
 
-print ("\n\nSaved feature data in file '"+args.directory[0]+"collection_data.pkl'\n\n")
+print ("\n\nSaved feature data in file '"+args.directory[0]+args.savefeatures+"\n\n")
 
 # get a list of the filenames
 filenames = np.array(list(data.keys()))
